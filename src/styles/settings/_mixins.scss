@@ -1,0 +1,29 @@
+@use "../settings/colors" as c;
+
+@mixin center($direction) {
+    align-items: center;
+    display: flex;
+    flex-direction: $direction;
+    justify-content: center;
+}
+
+@mixin input {
+    border-style: none;
+    outline: none;
+    color: white;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    width: 27px;
+    height: 27px;
+}
+
+@mixin inputNormal {
+    border-style: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: .2s;
+}

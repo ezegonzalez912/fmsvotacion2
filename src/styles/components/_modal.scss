@@ -1,0 +1,67 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.modal__main{
+    display: none;
+    top: 0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(43, 43, 43, 0.616);
+    z-index: 999;
+}
+
+.modal__main-open{
+    @include m.center(column);
+}
+
+.modal__container{
+    @include m.center(column);
+    background-color: c.$dark-primary;
+    border: 1px solid c.$border;
+    border-radius: 8px;
+    color: white;
+    padding: 20px;
+    width: 320px;
+    p{
+        margin: 0 10px 20px 10px;
+    }
+    label{
+        font-size: 13px;
+        display: flex;
+        width: 100%;
+        padding-left: 10px;
+    }
+}
+
+@mixin button{
+    @include m.inputNormal;
+    padding: 8px;
+    color: white;
+    border: 1px solid c.$border;
+    margin: 0 5px;
+    background-color: c.$dark-secundary;
+}
+
+.modal__button{
+    @include button;
+    &:hover{
+        background-color: c.$primary; 
+    }
+}
+
+.modal__input{
+    @include m.inputNormal;
+    border: 1px solid c.$border;
+    background-color: c.$dark-primary;
+    padding: 10px;
+    color: white;
+    width: 100%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    cursor: text;
+    &:focus{
+        border: 1px solid c.$primary;
+    }
+}
