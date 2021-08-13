@@ -1,0 +1,45 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.apoya__main{
+    position: absolute;
+    background-color: c.$dark-secundary;
+    border: 1px solid c.$border;
+    border-radius: 8px;
+    width: 285px;
+    padding: 5px;
+    bottom: 10px;
+    right: 10px;
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.315);
+    h1{
+        font-size: 14px;
+        font-weight: 500;
+        color: c.$primary;
+    }
+    p{
+        font-size: 13px;
+        padding-right: 10px;
+        font-weight: 300;
+        color: c.$dark-primary;
+        color: white;
+        span{
+            color: c.$primary;
+            text-decoration: underline;
+            cursor: pointer;
+            &:hover{
+                color: c.$secundary;
+            }
+        }
+    }
+    z-index: 900;
+}
+
+.apoya__title{
+    @include m.center(row);
+    justify-content: space-between;
+    svg{
+        cursor: pointer;
+        color: white;
+        font-size: 15px;
+    }
+}

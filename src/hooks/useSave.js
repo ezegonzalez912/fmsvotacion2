@@ -7,10 +7,22 @@ export const useSave = () => {
     const data = useContext(DataContext);
     const [storedValue, setValue] = useLocalStorage("data", []);
 
-    const guardar = (title, formato) => {
+    const guardar = (title, formato, competidores) => {
 
-        setValue(value => [...value, {data: data, title: title, formato: formato}])
+        var uniqid = require('uniqid');
+
+        setValue(values => [...values, {data: data, id: uniqid(), title: title, formato: formato, competidores}])
     }
 
-    return [guardar, storedValue]
+    const delateResutado = (id) => {
+        const dataNew = storedValue.filter( batalla => {
+            return !(batalla.id === id)
+        })
+
+        setValue(dataNew)
+    }
+
+    const datos = storedValue
+
+    return [guardar, delateResutado, datos]
 }

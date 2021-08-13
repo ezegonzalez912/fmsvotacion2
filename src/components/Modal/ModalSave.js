@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import { date } from '../helpers/date';
-import { useForm } from '../hooks/useForm';
-import { CompContext } from './Contexts/CompContext';
+import { date } from '../../helpers/date';
+import { useForm } from '../../hooks/useForm';
+import { CompContext } from '../Contexts/CompContext';
 
 export const ModalSave = ({isChangeModal, isSubmitModal, formato}) => {
 
@@ -11,12 +11,14 @@ export const ModalSave = ({isChangeModal, isSubmitModal, formato}) => {
         e.stopPropagation();
     }
 
-    const [values, handleInputChange] = useForm({title: "Jornada 1"});
+    const [values, handleInputChange] = useForm({title: "Jornada 1", fms: "FMS Argentina"});
 
-    const title = `${competidor1} vs ${competidor2} // ${values.title} // ${date()}`
+    const title = `${competidor1} vs ${competidor2} // ${values.title} // ${date()} // ${values.fms}`
+
+    const competidores = {competidor1, competidor2}
 
     const handleSubmitModal = () => {
-        isSubmitModal(title, formato)
+        isSubmitModal(title, formato, competidores)
         isChangeModal()
     }
 
@@ -25,7 +27,7 @@ export const ModalSave = ({isChangeModal, isSubmitModal, formato}) => {
             <p>Guardar batalla</p>
             <label>{competidor1} vs {competidor2}</label>
             <input name="title" className="modal__input" placeholder="Jornada 1" value={values.title} onChange={handleInputChange}/>
-            <select className="modal__input cursor-p">
+            <select name="fms" value={values.fms} className="modal__input cursor-p" onChange={handleInputChange}>
                 <option>FMS Argentina</option>
                 <option>FMS Chile</option>
                 <option>FMS España</option>

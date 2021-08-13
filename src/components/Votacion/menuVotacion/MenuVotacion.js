@@ -6,16 +6,17 @@ import { useReplica } from '../../../hooks/useReplica';
 import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp ,faExternalLinkAlt, faEyeSlash, faEye, faSave} from '@fortawesome/free-solid-svg-icons'
 import { FormatoContext } from '../../Contexts/FormatoContext';
 import { useSave } from '../../../hooks/useSave';
-import { Modal } from '../../Modal';
-import { ModalDefault } from '../../ModalDefault';
+import { Modal } from '../../Modal/Modal';
+import { ModalDefault } from '../../Modal/ModalDefault';
+import { ModalFormato } from '../../Modal/ModalFormato'
 import { useModal } from '../../../hooks/useModal';
 import { ModeVotacion } from './ModeVotacion';
-import { ModalSave } from '../../ModalSave';
+import { ModalSave } from '../../Modal/ModalSave';
 
-export const MenuVotacion = () => {
+export const MenuVotacion = ({ventana, setGreenScreen}) => {
     
     const {resetData} = useContext(DataContext);
-    const {formato, changeFormato} = useContext(FormatoContext);
+    const {changeFormato, formato} = useContext(FormatoContext);
 
     const [mode, prevMode, nextMode, setMode] = useMode();
     const [invertir, nuevaReplica] = useReplica();
@@ -29,7 +30,15 @@ export const MenuVotacion = () => {
     const [modalFormato, changeModalFormato] = useModal();
     const [modalSave, changeModalSave] = useModal();
 
-    const changeForamatoModal = () => changeFormato(setMode)
+    const openWindow = () => {
+        window.open(
+          "/vote-window", 
+          "FMSVOTACION.COM", 
+          "width=752, height=220, scrollbars=NO"
+        )
+    }
+
+    const changeForamatoModal = () => changeFormato(setMode);
 
     return (
         <>
@@ -37,12 +46,12 @@ export const MenuVotacion = () => {
             <ModalDefault title={"¿Seguro desea borrar los datos?"} titleButton={"Borrar datos"} isChangeModal={changeModalReset} isSubmitModal={resetData}/>
         </Modal>
         <Modal isOpenModal={modalFormato} isChangeModal={changeModalFormato}>
-            <ModalDefault title={"¿Seguro desea cambiar el formato?"} titleButton={"Cambiar"} isChangeModal={changeModalFormato} isSubmitModal={changeForamatoModal}/>
+            <ModalFormato isChangeModal={changeModalFormato} isSubmitModal={changeForamatoModal}/>
         </Modal>
         <Modal isOpenModal={modalSave} isChangeModal={changeModalSave}>
-            <ModalSave title={"¿Seguro desea cambiar el formato?"} titleButton={"Cambiar"} isChangeModal={changeModalSave} isSubmitModal={guardar} formato={formato}/>
+            <ModalSave isChangeModal={changeModalSave} isSubmitModal={guardar} formato={formato}/>
         </Modal>
-        <div className="menu__main">
+        <div className="menu__main">   
             <div className="menu__container">
                 <div className="menu__move" onClick={prevMode}>
                     <FontAwesomeIcon icon={faChevronLeft}/>
@@ -50,7 +59,7 @@ export const MenuVotacion = () => {
                 <div className="menu__mode">
                     <div className="menu__title">
                         <p>{mode}</p>
-                        <FontAwesomeIcon icon={faExternalLinkAlt}/>
+                        {!ventana && <FontAwesomeIcon icon={faExternalLinkAlt} onClick={openWindow}/>}    
                     </div>
                     <ModeVotacion showTotal={showTotal} invertir={invertir} mode={mode}/>
                     <div className="menu__show" onClick={() => setButtons(!buttons)}>
@@ -69,7 +78,8 @@ export const MenuVotacion = () => {
                 <button onClick={changeModalReset}>Borrar datos</button>
                 <button onClick={changeModalSave} className="menu__button-short"><FontAwesomeIcon icon={faSave}/></button>
                 <button onClick={() => setShowTotal(!showTotal)} className="menu__button-short"><FontAwesomeIcon icon={showTotal ? faEye : faEyeSlash}/></button>
-                <button onClick={changeModalFormato}>{ formato === "2018" ? "Formato 2020/21" : "Formato 2018/19"}</button>
+                <button onClick={changeModalFormato}>Formato</button>
+                {ventana && <button onClick={() => setGreenScreen(greenScreen => !greenScreen)}>Fondo verde</button>}
             </div>
         </div>
         </>

@@ -6,6 +6,8 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    height: auto;
+    box-sizing: border-box;
     p{
         width: 12%;
         margin: 0;
@@ -17,11 +19,14 @@
     cursor: text;
     padding: 3px 0;
     text-align: center;
-    background-color: c.$dark-primary;
-    border: 1px solid c.$dark-secundary;
+    background-color: c.$dark-secundary;
+    border: 1px solid c.$border;
     color: white;
     width: 17%;
     margin: 0;
+    &:focus{
+        border: 1px solid c.$primary;
+    }
 }
 
 .mode__input{
@@ -73,7 +78,7 @@
 
 .mode__resultado-subtitle{
     margin: 0;
-    color: white;
+    color: c.$primary;
     font-weight: 600;
     letter-spacing: .45px;
 }

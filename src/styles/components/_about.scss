@@ -1,0 +1,110 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.about__main{
+    @include m.center(column);
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 100px;
+    padding-bottom: 150px;
+    box-sizing: border-box;
+    h1{
+        color: white;
+    }
+}
+
+.about__title{
+    margin-bottom: 10px;
+    h2{
+        letter-spacing: 0.010em;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 90%;
+        color: white;
+    }
+    p{
+        color: c.$primary;
+        font-size: 20px;
+        letter-spacing: 0.45em;
+        font-weight: 500;
+    }
+}
+
+.about__info{
+    color: white;
+    margin-bottom: 20px;
+    max-width: 800px;
+    h1{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    p{
+        font-size: 14px;
+        font-weight: 300;
+        a{
+            color: c.$primary;
+            &hover{
+                color: c.$secundary;
+            }
+        }
+    }
+}
+
+@media (max-width:700px){
+    .about__main{
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .about__title{
+        h2{
+            font-size: 30px;
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+    .about__info{
+        h1{
+            font-size: 15px;  
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width:500px){
+    .about__main{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .about__title{
+        h2{
+            font-size: 28px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    .about__info{
+        h1{
+            font-size: 13px;  
+        }
+        p{
+            font-size: 11px;
+        }
+    }
+}
+@media (max-width:400px){
+    .about__main{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+    .about__title{
+        h2{
+            font-size: 24px;
+        }
+    }
+}

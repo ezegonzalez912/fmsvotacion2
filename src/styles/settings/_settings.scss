@@ -1,3 +1,5 @@
+@use "../settings/colors" as c;
+
 .opacity-0{
     opacity: 0;
 }
@@ -12,4 +14,33 @@
 
 .cursor-p{
     cursor: pointer;
+}
+
+.color-dark{
+    color: rgb(158, 67, 219); 
+}
+
+.title-ppl{
+    letter-spacing: 0.010em;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 90%;
+    color: white;
+}
+
+.title-scy{
+    color: c.$primary;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    font-weight: 500;
+}
+
+@media (max-width:800px){
+    .title-ppl{
+        font-size: 30px
+    }
+    .title-scy{
+        font-size: 15px;
+    }
 }

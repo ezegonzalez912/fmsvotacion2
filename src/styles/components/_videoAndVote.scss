@@ -1,0 +1,42 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.videoAndVote__main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+}
+
+.video-player{
+    width: 100%;
+    height: 100%;
+    iframe{
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 738px){
+    .videoAndVote__main{
+        padding: 0;
+    }
+    .video-player{
+        iframe{
+            border-radius: 0;
+        }
+    }
+    .vote-app__scroll{
+        box-sizing: border-box;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        min-height: 195px;
+        display: flex;
+        align-items: flex-start;
+        padding: 0 5px;
+    }
+}

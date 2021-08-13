@@ -1,10 +1,7 @@
-import { useContext, useEffect, useState } from "react"
-import { DataContext } from "../components/Contexts/DataContext";
+import { useEffect, useState } from "react"
 import { totalData } from "../helpers/totalData"
 
-export const useTotal = () => {
-
-    const data = useContext(DataContext);
+export const useTotal = (data) => {
 
     const {easyMode, hardMode, firstTematica, secondTematica, randomMode, firstSangre, secondSangre, deluxeMode, personajes} = data;
 

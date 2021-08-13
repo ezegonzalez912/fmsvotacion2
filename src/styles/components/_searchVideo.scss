@@ -1,0 +1,161 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.searchVideo__main{
+    position: relative;
+    @include m.center(column);
+    height: 100%;
+}
+
+.searchVideo__title{
+    @include m.center(column);
+    color: white;
+    p{
+        color: c.$primary;
+        font-size: 20px;
+        letter-spacing: 0.45em;
+    }
+    h2{
+        letter-spacing: 0.010em;
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        line-height: 110%;
+        margin-bottom: 10px;
+    }
+}
+
+.searchVideo__form{
+    display: none;
+    border-radius: 20px;
+    z-index: 200;
+    @include m.center(row);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.315);
+    input{
+        @include m.inputNormal;
+        border-radius: 20px 0 0 20px;
+        width: 450px;
+        padding: 0 10px;
+        height: 40px;
+        color: c.$dark-secundary;
+        cursor: text;
+        background: c.$primary;
+        &::placeholder{
+            letter-spacing: 0.6px;
+            color: c.$dark-secundary;
+            font-size: 15px;
+        }
+    }
+    button{
+        @include m.inputNormal;
+        @include m.center(row);
+        background: c.$primary;
+        border-left: 1px solid c.$dark-secundary;
+        border-radius: 0 20px 20px 0;
+        padding: 0 15px;
+        height: 40px;
+        color: c.$dark-secundary;
+        &:hover{
+            background: c.$secundary;
+        }
+    }
+}
+
+.searchVideo____ventana{
+    @include m.center(row);
+    cursor: pointer;
+    color: c.$secundary;
+    transition: .2s;
+    p{
+        margin-top: 5px;
+        text-decoration: underline;
+        font-size: 13px;
+    }
+    svg{
+        font-size: 8px;
+        margin-left: 2px;
+    }
+    &:hover{
+        color: c.$primary;
+    }
+}
+
+.curve{
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+    svg{
+        path{
+            fill: c.$primary;
+        }
+    }
+}
+
+@media (max-width:800px){
+    .searchVideo__title{
+        h2{
+            font-size: 32px;
+            line-height: 45px;
+        }
+        p{
+            font-size: 17px;
+        }
+    }
+    .searchVideo____ventana{
+        display: none;
+    }
+}
+
+@media (max-width:600px){
+    .searchVideo__main{
+        padding:0 30px;
+    }
+    .searchVideo__form{
+        width: 100%;
+        input{
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width:500px){
+    .searchVideo__title{
+        h2{
+            font-size: 25px;
+            line-height: 120%;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+}
+@media (max-width:400px){
+    .searchVideo__title{
+        h2{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+    .searchVideo__main{
+        padding: 0 15px;
+    }
+}
+@media (max-width:300px){
+    .searchVideo__main{
+        padding:0 5px;
+    }
+    .searchVideo__title{
+        h2{
+            font-size: 17px;
+            margin: 3px 0 15px 0;
+        }
+        p{
+            font-size: 11px;
+        }
+    }
+}

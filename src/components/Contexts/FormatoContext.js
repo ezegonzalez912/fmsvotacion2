@@ -12,12 +12,6 @@ export const FormatoProvider = ({ children }) => {
     const changeFormato = (setMode) => {
         resetData();
         setMode("EASY MODE");
-        if(formato === "2018"){
-            setFormato("2020")
-        }
-        if(formato === "2020"){
-            setFormato("2018")
-        }
     }
 
     const data = {
