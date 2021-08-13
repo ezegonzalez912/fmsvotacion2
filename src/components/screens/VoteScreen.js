@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { VotacionApp } from '../VotacionApp'
 
 export const VoteScreen = () => {
+
+    useEffect(() => {
+        document.title = "FMS Votación - Votar";
+    }, []);
 
     const {id} = useParams()
 

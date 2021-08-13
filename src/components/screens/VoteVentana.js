@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { VotacionApp } from '../VotacionApp'
 
 export const VoteVentana = () => {
+
+    useEffect(() => {
+        document.title = "FMS Votación - Ventana";
+    }, []);
 
     const [greenScreen, setGreenScreen] = useState(false)
 

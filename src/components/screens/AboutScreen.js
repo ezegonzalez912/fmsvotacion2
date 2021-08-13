@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export const AboutScreen = () => {
+
+    useEffect(() => {
+        document.title = "FMS Votación - Acerca de";
+    }, []);
+
     return (
         <div className="about__screen">
             <div className="about__main">

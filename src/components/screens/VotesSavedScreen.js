@@ -5,6 +5,10 @@ import { VotacionGuardada } from '../votaciones/VotacionGuardada'
 
 export const VotesSavesScreen = () => {
 
+    useEffect(() => {
+        document.title = "FMS Votación - Votaciones";
+    }, []);
+
     const [, delateResutado, datos] = useSave();
 
     const [values, handleInputChange] = useForm({search: ""})

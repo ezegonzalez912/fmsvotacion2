@@ -1,11 +1,15 @@
 import { faExternalLinkAlt, faSearch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import getVideoId from 'get-video-id';
 import { Error } from '../Error';
 import { Apoya } from '../Apoya';
 
 export const MainScreen = ({history}) => {
+
+    useEffect(() => {
+        document.title = "FMS Votación - Inicio";
+    }, []);
 
     const [searchInput, setSearchInput] = useState("")
 
