@@ -16,20 +16,17 @@ export const PracticeScreen = () => {
                 <div className="practice__main">
                     <p className="practice__contador">60</p>
                     <div>
-                        <div className="practice__main-counter-mode">
-                            <div className="practice__select-mode">
-                                <button>previus</button>
-                                <p>EASY MODE</p>
-                                <button>next</button>
-                            </div>
-                            <div className="practice__palabra">
-                                <p>BAILAR</p>
-                            </div>
+                        <div className="practice__select-mode">
+                            <button></button>
+                            <p>EASY MODE</p>
+                            <button></button>
+                        </div>
+                        <div className="practice__palabra">
+                            <p>BAILAR</p>
                         </div>
                     </div>
                     <div className="practice__controls">
-                        <button>Reset</button>
-                        <button>Play</button>
+
                     </div>
                 </div>
             </div>
