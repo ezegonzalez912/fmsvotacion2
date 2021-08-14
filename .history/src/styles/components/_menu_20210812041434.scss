@@ -41,7 +41,7 @@
     height: 20px;
     p{
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 500;
         margin: 0;
     }
     svg{
@@ -119,46 +119,9 @@
     opacity: 0;
 }
 
-.menu__title-icons{
-    @include m.center(row);
-    flex-direction: row-reverse;
-}
-
-.menu__title-icon-question{
-    cursor: pointer;
-    &:hover{
-        color: c.$primary;
-    }
-}
-
-.menu__title-icon-window{
-    margin-left: 10px;
-}
-
-.menu__title-question{
-    display: none;
-    padding: 5px;
-    position: relative;
-    top: 30px;
-    margin-right: 5px;
-    background: c.$dark-secundary;
-    border: 1px solid c.$border;
-    border-radius: 10px 0 10px 10px;
-    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.315);
-    p{
-        font-size: 12px;
-        font-weight: 200;
-        color: white;
-    }
-}
-
-.menu__title-icon-question:hover ~ .menu__title-question{
-    display: flex;
-}
-
 @media (max-width: 739px){
     .menu__title{
-        
+        justify-content: center;
         svg{
             display: none;
         }

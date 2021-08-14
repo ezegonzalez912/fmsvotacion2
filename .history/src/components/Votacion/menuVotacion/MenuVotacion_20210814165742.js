@@ -3,7 +3,7 @@ import { useMode } from '../../../hooks/useMode';
 import { DataContext } from '../../Contexts/DataContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useReplica } from '../../../hooks/useReplica';
-import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp ,faExternalLinkAlt, faEyeSlash, faEye, faSave} from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faChevronDown, faChevronUp ,faExternalLinkAlt, faEyeSlash, faEye, faSave, faQuestion} from '@fortawesome/free-solid-svg-icons'
 import { FormatoContext } from '../../Contexts/FormatoContext';
 import { useSave } from '../../../hooks/useSave';
 import { Modal } from '../../Modal/Modal';
@@ -60,15 +60,9 @@ export const MenuVotacion = ({ventana, setGreenScreen}) => {
                     <div className="menu__title">
                         <p>{mode}</p>
                         <div className="menu__title-icons">
-                            {!ventana && <FontAwesomeIcon className="menu__title-icon-window" icon={faExternalLinkAlt} onClick={openWindow}/>}    
-                            <p className="menu__title-icon-question">?</p>
-                            <div className="menu__title-question">
-                                <p>
-                                    -Puntos medios con <span className="color-primary f-w800">.</span> (Punto).<br />
-                                    -Marcar respuesta con <span className="color-primary f-w800">+</span> (Más).<br />
-                                    -Avanzar entre inputs con <span className="color-primary f-w800">TAB</span>.
-                                </p>
-                            </div>
+                            <h6>?</h6>
+                            <FontAwesomeIcon icon={faQuestion} className="menu__title-icon-question"/>
+                            {!ventana && <FontAwesomeIcon icon={faExternalLinkAlt} onClick={openWindow}/>}    
                         </div>
                     </div>
                     <ModeVotacion showTotal={showTotal} invertir={invertir} mode={mode}/>

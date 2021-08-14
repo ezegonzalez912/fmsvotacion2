@@ -60,15 +60,9 @@ export const MenuVotacion = ({ventana, setGreenScreen}) => {
                     <div className="menu__title">
                         <p>{mode}</p>
                         <div className="menu__title-icons">
-                            {!ventana && <FontAwesomeIcon className="menu__title-icon-window" icon={faExternalLinkAlt} onClick={openWindow}/>}    
+                            <div className="menu__title-question"></div>
                             <p className="menu__title-icon-question">?</p>
-                            <div className="menu__title-question">
-                                <p>
-                                    -Puntos medios con <span className="color-primary f-w800">.</span> (Punto).<br />
-                                    -Marcar respuesta con <span className="color-primary f-w800">+</span> (Más).<br />
-                                    -Avanzar entre inputs con <span className="color-primary f-w800">TAB</span>.
-                                </p>
-                            </div>
+                            {!ventana && <FontAwesomeIcon className="menu__title-icon-window" icon={faExternalLinkAlt} onClick={openWindow}/>}    
                         </div>
                     </div>
                     <ModeVotacion showTotal={showTotal} invertir={invertir} mode={mode}/>
