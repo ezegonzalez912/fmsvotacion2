@@ -56,7 +56,7 @@ export const MainScreen = ({history}) => {
                         <h2>¡VOTA LAS BATALLAS DE FMS <br /> DESDE UN SOLO LUGAR!</h2>
                     </div>
                     <form className="searchVideo__form" onSubmit={onSubmitButton}>
-                        <input autoComplete="off" type="text" placeholder="Ingresa el link de la batalla o directo" onChange={e => setSearchInput(e.target.value)} value={searchInput}/>
+                        <input autoComplete="off" type="text" placeholder="Ingresa el link de la batalla" onChange={e => setSearchInput(e.target.value)} value={searchInput}/>
                         <button type="submit">
                             <FontAwesomeIcon icon={faSearch} />
                         </button>
