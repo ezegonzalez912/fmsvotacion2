@@ -24,13 +24,14 @@ export const useWords = (mode, time) => {
             setPalabra(newPalabraT)
         }
         if(mode === "INCREMENTAL"){
-            if(time <= 90 && time >= 60 && time % 10 === 0){
+            if(time <= 90 && time % 10 === 0){
                 return setPalabra(newPalabra)
             }
-            if(time <= 60 && time >= 30 && time % 5 === 0){
+            if(time <= 60 && time % 5 === 0){
                 return setPalabra(newPalabra)
             }
-            if(time <= 30 && time % 2 === 0){
+            if(time <= 30 && ((time % 2) === 0)){
+                console.log(time)
                 return setPalabra(newPalabra)
             }
         }

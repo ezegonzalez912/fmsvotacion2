@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../visuals/logoBlanco.png'
 
-export const NavBar = () => {
+export const NavBar = ({history}) => {
 
   const [openMenu, setOpenMenu] = useState(false)
 

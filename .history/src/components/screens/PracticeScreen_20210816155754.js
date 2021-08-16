@@ -66,7 +66,7 @@ export const PracticeScreen = () => {
             </form>
             <div className="practice__main">
                 <div className="practice__select-video">
-                    <iframe src={`https://www.youtube.com/embed/${id}`} title="Instrumental FMS" frameBorder="0" allowFullScreen/>
+                    <iframe src={`https://www.youtube.com/embed/${id}`} title="Instrumental FMS" frameBorder="0" allowFullScreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"/>
                     <div className="practice__video-list">
                         {
                             listaBeats.map( (beat, index) => {

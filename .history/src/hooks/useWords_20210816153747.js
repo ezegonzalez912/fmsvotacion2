@@ -25,12 +25,15 @@ export const useWords = (mode, time) => {
         }
         if(mode === "INCREMENTAL"){
             if(time <= 90 && time >= 60 && time % 10 === 0){
+                console.log(`${time} & 1`)
                 return setPalabra(newPalabra)
             }
             if(time <= 60 && time >= 30 && time % 5 === 0){
+                console.log(`${time} & 2`)
                 return setPalabra(newPalabra)
             }
             if(time <= 30 && time % 2 === 0){
+                console.log(`${time} & 3`)
                 return setPalabra(newPalabra)
             }
         }

@@ -1,6 +1,6 @@
 import { faChevronLeft, faChevronRight, faPlay, faSearch, faUndo } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Curve } from '../Curve'
 import getVideoId from 'get-video-id';
 import { useTimer } from 'use-timer';
@@ -44,7 +44,7 @@ export const PracticeScreen = () => {
     const [mode, nextMode, prevMode] = usePracticeMode(time);
     const palabra = useWords(mode, time);
     
-    const [idBeat, listaBeats] = useListBeats();
+    const [idBeat, listaBeats] = useListBeats(3);
 
     const [id, setId] = useState(idBeat)
 
@@ -66,7 +66,7 @@ export const PracticeScreen = () => {
             </form>
             <div className="practice__main">
                 <div className="practice__select-video">
-                    <iframe src={`https://www.youtube.com/embed/${id}`} title="Instrumental FMS" frameBorder="0" allowFullScreen/>
+                    <iframe src={`https://www.youtube.com/embed/${id}`} title="YouTube video player" frameBorder="0" allowFullScreen />
                     <div className="practice__video-list">
                         {
                             listaBeats.map( (beat, index) => {
