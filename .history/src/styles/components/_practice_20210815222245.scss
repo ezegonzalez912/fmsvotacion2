@@ -1,0 +1,125 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.practice__main{
+    @include m.center(row);
+    flex-wrap: wrap;
+    margin-top: 20px;
+    width: 100%;
+    height: auto;
+}
+
+.practice__title{
+    margin-bottom:10px; 
+}
+
+.practice__select-video{
+    @include m.center(column);
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    justify-content: space-between;
+    iframe{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        border: 1px solid c.$border;
+    }
+}
+
+.practice__video-list{
+    @include m.center(row);
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 5px;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.video-list-item{
+    background: c.$dark-secundary;
+    border: 1px solid c.$border;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
+
+.practice__palabra-control{
+    width: 100%;
+}
+
+.practice__counter-mode{
+    @include m.center(column);
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.practice__select-mode{
+    @include m.center(row);
+    gap: 15px;
+    svg{
+        width: 30px;
+        cursor: pointer;
+        color: white;
+        font-size: 20px;
+    }
+    p{
+        font-size: 20px;
+        color: white;
+    }
+}
+
+.practice__contador{
+    font-size: 145px;
+    line-height: 140px;
+    font-weight: 600;
+    color: white;
+}
+
+.practice__palabra{
+    background: c.$dark-secundary;
+    border: 1px solid c.$border;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 8px 8px 0 0; 
+    p{
+        color: white;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+}
+
+.practice__controls{
+    @include m.center(row);
+    margin-top: 5px;
+    justify-content: space-between;
+    gap: 5px;
+    width: 100%;
+    div{
+        @include m.center(row);
+        background: c.$dark-secundary;
+        border: 1px solid c.$border;
+        width: 100%;
+        height: 40px;
+        cursor: pointer;
+        svg{
+            color: white;
+            font-size: 20px;
+        }
+    }
+    
+}
+
+.control-left{
+    border-radius: 0 0 0px 8px;
+}
+
+.control-right{
+    border-radius: 0 0 8px 0px;
+}

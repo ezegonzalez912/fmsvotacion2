@@ -1,0 +1,35 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.practice__main{
+    @include m.center(row);
+    flex-wrap: wrap; 
+}
+
+.practice__select-video{
+    width: 350px;
+    height: 200px;
+    iframe{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        border: 1px solid c.$border;
+    }
+}
+
+.practice__video-list{
+    @include m.center(row);
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.video-list-item{
+    background: c.$dark-secundary;
+    border: 1px solid c.$border;
+    border-radius: 8px;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}

@@ -1,0 +1,28 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.practice__main{
+    @include m.center(row);
+    flex-wrap: wrap; 
+}
+
+.practice__select-video{
+    width: 500px;
+    height: 800px;
+    iframe{
+        width: 100%;
+    }
+}
+
+.practice__video-list{
+    @include m.center(row);
+    flex-wrap: wrap;
+    gap: 10px 0;
+    justify-content: space-between;
+}
+
+.video-list-item{
+    background: c.$primary;
+    border-radius: 8px;
+    width: 48%;
+}

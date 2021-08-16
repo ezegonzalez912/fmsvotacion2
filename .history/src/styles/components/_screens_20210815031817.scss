@@ -1,0 +1,60 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.screen__main{
+    box-sizing: border-box;
+    min-height: 600px;
+    min-width: 280px;
+    height: 100vh;
+    width: 100%;
+}
+
+.screen__vote{
+    margin-top: 70px;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    height: 100vh;
+    min-height: 400px;
+    min-width: 280px;
+}
+
+.vote-window__screen{
+    @include m.center(column);
+    height: 100vh;
+    width: 100%;
+}
+
+.about__screen{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    min-width: 280px;
+}
+
+.vote-saved__screen{
+    min-width: 280px;
+    height: auto;
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    @include m.center(column);
+    justify-content: flex-start;
+    gap: 50px;
+    position: relative;
+}
+
+.screen__practice{
+    box-sizing: border-box;
+    min-height: 600px;
+    min-width: 280px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}

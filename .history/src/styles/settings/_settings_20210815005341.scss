@@ -1,0 +1,68 @@
+@use "../settings/colors" as c;
+
+.opacity-0{
+    opacity: 0;
+}
+
+.dsp-none{
+    display: none;
+}
+
+.pd-0{
+    padding: 0;
+}
+
+.cursor-p{
+    cursor: pointer;
+}
+
+.color-primary{
+    color: c.$primary; 
+}
+
+.f-w800{
+    font-weight: 800;
+}
+
+.title-ppl{
+    letter-spacing: 0.010em;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 90%;
+    color: white;
+}
+
+.title-scy{
+    text-align: center;
+    color: c.$primary;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    font-weight: 500;
+}
+
+.input-search{
+    @include m.inputNormal;
+    border-radius: 20px;
+    width: 450px;
+    padding: 0 10px;
+    height: 40px;
+    color: c.$dark-primary;
+    cursor: text;
+    background: c.$primary;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.315);
+    margin-top: 5px;
+    &::placeholder{
+        letter-spacing: 0.6px;
+        color: c.$dark-primary;
+    }
+}
+
+@media (max-width:800px){
+    .title-ppl{
+        font-size: 30px
+    }
+    .title-scy{
+        font-size: 15px;
+    }
+}

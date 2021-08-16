@@ -1,0 +1,124 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.opacity-0{
+    opacity: 0;
+}
+
+.dsp-none{
+    display: none;
+}
+
+.pd-0{
+    padding: 0;
+}
+
+.cursor-p{
+    cursor: pointer;
+}
+
+.color-primary{
+    color: c.$primary; 
+}
+
+.f-w800{
+    font-weight: 800;
+}
+
+.title-ppl{
+    letter-spacing: 0.010em;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 90%;
+    color: white;
+}
+
+.title-scy{
+    text-align: center;
+    color: c.$primary;
+    font-size: 20px;
+    letter-spacing: 0.45em;
+    font-weight: 500;
+}
+
+.input-search{
+    @include m.inputNormal;
+    border-radius: 20px 0 0 20px;
+    width: 450px;
+    padding: 0 10px;
+    height: 40px;
+    color: c.$dark-secundary;
+    cursor: text;
+    background: c.$primary;
+    &::placeholder{
+        letter-spacing: 0.6px;
+        color: c.$dark-secundary;
+        font-size: 15px;
+    }
+}
+.input-search-button{
+    @include m.inputNormal;
+    @include m.center(row);
+    background: c.$primary;
+    border-left: 1px solid c.$dark-secundary;
+    border-radius: 0 20px 20px 0;
+    padding: 0 15px;
+    height: 40px;
+    color: c.$dark-secundary;
+    &:hover{
+        background: c.$secundary;
+    }
+}
+
+.dsp-flex{
+    display: flex;
+}
+
+.select-none{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+@media (max-width:800px){
+    .title-ppl{
+        font-size: 30px
+    }
+    .title-scy{
+        font-size: 15px;
+    }
+}
+@media (max-width:600px){
+    .input-search{
+        @include m.inputNormal;
+        border-radius: 20px 0 0 20px;
+        width: 400px;
+        padding: 0 10px;
+        height: 40px;
+        color: c.$dark-secundary;
+        cursor: text;
+        background: c.$primary;
+        &::placeholder{
+            letter-spacing: 0.6px;
+            color: c.$dark-secundary;
+            font-size: 15px;
+        }
+    }
+    .input-search-button{
+        @include m.inputNormal;
+        @include m.center(row);
+        background: c.$primary;
+        border-left: 1px solid c.$dark-secundary;
+        border-radius: 0 20px 20px 0;
+        padding: 0 15px;
+        height: 40px;
+        color: c.$dark-secundary;
+        &:hover{
+            background: c.$secundary;
+        }
+    }
+}

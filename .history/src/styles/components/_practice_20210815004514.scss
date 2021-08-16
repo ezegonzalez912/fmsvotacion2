@@ -1,0 +1,7 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.practice__main{
+    @include m.center(row);
+    flex-wrap: wrap; 
+}
