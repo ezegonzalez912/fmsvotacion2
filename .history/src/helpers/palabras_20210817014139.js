@@ -19,7 +19,7 @@ export const palabras = [
         'Legendario', 'Anatomía', 'Informacion', 'Miniatura', 'Centro', 'Alegría', 'Horrible', 'Cuna', 'Tigre', 'Aplauso', 'Geométrico', 'Juvenil', 'Tomar',
         'Bacteria', 'Establecimiento', 'Ingresos', "Carreras", "Fibra", "Formula 1", "Mandíbula", "boxeo", "Inteligente", "Alienigena", "Cartas", "As", "Tren", "Vias", "Escopeta", "Secuestrar",
         'Carro', 'Clima', 'Guantes', 'Conservador', 'Cocodrilo', 'Rociar', 'Responder', 'Estufa', 'Construir', 'Curar', 'Jefe', 'Defecto', 'Enemigo', 'Antorcha', 'Tremendo',
-        'Carbón', 'Llave', 'Mujeres', 'Justicia', 'Mapa', 'Obligación', 'Montaña', 'Buzón', 'Colmena', 'Dardo', 'Eficaz', 'Castillo', 'Cantidad', "Problema", "Quebrar", "Pistola", 
+        'Carbón', 'Llave', 'Mujeres', 'Justicia', 'Mapa', 'Obligación', 'Montaña', 'Buzón', 'Colmena', 'Dardo', 'Eficaz', 'Castillo', 'Cantidad',
         'Levantarse', 'Abandonado', 'Mago', 'ley', "Bandera", "Pais", "Honesto", "Cumpleaños", "Burbuja", "Planeta", "Galaxia", "Iphone", "Nacer", "Botella", "Steve Jobs", "Elon Musk", "Facebook",
         'Escandaloso', 'Presión', 'Mezcla', 'Mano', 'Tarta', 'Híbrido', 'Lista', 'Lujoso', 'Atacar', 'Ahogado', 'Medianoche', 'Vacuna', "Navegar", "Medalla", "Mercenario", "Tiempo", "Guardaespaldas"]
     },

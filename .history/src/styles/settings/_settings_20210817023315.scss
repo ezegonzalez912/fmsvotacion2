@@ -44,6 +44,11 @@
     z-index: 400 !important;
 }
 
+.wv-100{
+    width: 100%;
+    height: 100%;
+}
+
 .input-search{
     @include m.inputNormal;
     border-radius: 20px 0 0 20px;

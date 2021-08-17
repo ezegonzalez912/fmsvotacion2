@@ -19,7 +19,7 @@ export const palabras = [
         'Legendario', 'Anatomía', 'Informacion', 'Miniatura', 'Centro', 'Alegría', 'Horrible', 'Cuna', 'Tigre', 'Aplauso', 'Geométrico', 'Juvenil', 'Tomar',
         'Bacteria', 'Establecimiento', 'Ingresos', "Carreras", "Fibra", "Formula 1", "Mandíbula", "boxeo", "Inteligente", "Alienigena", "Cartas", "As", "Tren", "Vias", "Escopeta", "Secuestrar",
         'Carro', 'Clima', 'Guantes', 'Conservador', 'Cocodrilo', 'Rociar', 'Responder', 'Estufa', 'Construir', 'Curar', 'Jefe', 'Defecto', 'Enemigo', 'Antorcha', 'Tremendo',
-        'Carbón', 'Llave', 'Mujeres', 'Justicia', 'Mapa', 'Obligación', 'Montaña', 'Buzón', 'Colmena', 'Dardo', 'Eficaz', 'Castillo', 'Cantidad', "Problema", "Quebrar", "Pistola", 
+        'Carbón', 'Llave', 'Mujeres', 'Justicia', 'Mapa', 'Obligación', 'Montaña', 'Buzón', 'Colmena', 'Dardo', 'Eficaz', 'Castillo', 'Cantidad',
         'Levantarse', 'Abandonado', 'Mago', 'ley', "Bandera", "Pais", "Honesto", "Cumpleaños", "Burbuja", "Planeta", "Galaxia", "Iphone", "Nacer", "Botella", "Steve Jobs", "Elon Musk", "Facebook",
         'Escandaloso', 'Presión', 'Mezcla', 'Mano', 'Tarta', 'Híbrido', 'Lista', 'Lujoso', 'Atacar', 'Ahogado', 'Medianoche', 'Vacuna', "Navegar", "Medalla", "Mercenario", "Tiempo", "Guardaespaldas"]
     },
@@ -29,7 +29,7 @@ export const palabras = [
         'Famosos', 'Epocas', 'Traperos', 'Regalos', 'Familia', 'Conspiraciones', 'Energia', 'Poder', 'Dieta', 'Libertad', 'Desastres', 'Influencers', 'Marcas', 'Drogas','Television','Juegos',
         'Crimenes', 'Infancia', 'Felicidad','Religion','Trabajos', 'Hackers', 'Leyendas', 'Ingresos', 'Magia', 'Polemicas', 'Dinero', 'Abanderado', 'Colegio', 'Consejos', 'Galaxia', 'Leyes', 'Eventos', 'Musica',
         'Bad bunny', 'Daddy Yankee', 'Estaciones', 'Matematicas','Censura', 'Messi', 'CR7', 'Neymar', 'Mbappe', 'Lebron', 'Veganismo', 'E-Sports', 'Marvel', 'Comic', 'Fobias', "Twitch", "Youtubers", "Videoclips",
-        "Popularidad", "Honestidad", "Cumpleaños", "Vialactea", "Redes sociales", "Olimpiadas", "Inteligencia Artificial", "Guerras", "Reciclar", "Matrimonio", "Contratos", "Anime", "Drogras", "Noticias", "Actualidad"]
+        "Popularidad", "Honestidad", "Cumpleaños", "Vialactea", "Redes sociales", "Olimpiadas", "Inteligencia Artificial", "Guerras", "Reciclar", "Matrimonio", "Contratos", "Anime", "Drogras"]
         }
 ]
     

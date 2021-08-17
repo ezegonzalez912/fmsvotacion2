@@ -50,8 +50,9 @@ export const PracticeScreen = () => {
 
     return (
         <>
+        
         <div className="screen__practice">
-            <div className={`searchVideo__practice animate__animated ${error ? "animate__bounceInDown" : "dsp-none"}`}>
+            <div className={`searchVideo__ventana animate__animated ${error ? "animate__bounceInDown" : "dsp-none"}`}>
                 <Error/>
             </div>
             <div className="practice__title">

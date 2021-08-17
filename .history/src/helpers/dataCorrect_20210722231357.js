@@ -15,8 +15,6 @@ export const dataCorrect = (data) => {
     }
 
     switch(data){
-        case "0.":
-            return 0.5
         case "1.":
             return 1.5;
         case "2.":

@@ -10,7 +10,7 @@
 
 .practice__title{
     margin-bottom:10px;
-    z-index: 400 !important;
+    z-index: 500;
 }
 
 .practice__select-video{
@@ -45,7 +45,7 @@
     justify-content: space-between;
     padding: 5px;
     p{
-        width: 90%;
+        width: 310px;
         color: white;
         font-weight: 200;
         white-space: nowrap;
@@ -156,10 +156,4 @@
 
 .control-right{
     border-radius: 0 0 8px 0px;
-}
-
-@media (max-width:400px){
-    .practice__select-video{
-        width: 100%;
-    }
 }
