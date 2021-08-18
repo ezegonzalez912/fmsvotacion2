@@ -1,0 +1,51 @@
+@mixin default($padding) {
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
+    text-align: right;
+    padding-right: $padding;
+    p{
+        font-size: 10px;
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.subtitle_4{
+    margin-left: 7px;
+}
+.subtitle_3{
+    margin-left: 5px;
+}
+.subtitle_2{
+    margin-left: 4px;
+}
+
+.menu__easy-subtitle{
+    @include default(72px);
+}
+
+.menu__hard-subtitle{
+    @include default(83px);
+}
+
+.menu__tematica-subtitle{
+    @include default(104px);
+}
+
+.menu__random-subtitle{
+    @include default(60px);
+}
+
+.menu__sangre-subtitle{
+    @include default(82px);
+}
+
+.menu__deluxe-subtitle{
+    @include default(22px);
+}
+
+.menu__incremental-subtitle{
+    @include default(22px);
+}

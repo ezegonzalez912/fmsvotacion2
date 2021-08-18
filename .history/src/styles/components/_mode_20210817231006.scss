@@ -1,0 +1,85 @@
+@use "../settings/colors" as c;
+@use "../settings/mixins" as m;
+
+.mode__main{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    p{
+        width: 12%;
+        margin: 0;
+    }
+}
+
+.mode__name{
+    @include m.inputNormal;
+    cursor: text;
+    padding: 3px 0;
+    text-align: center;
+    background-color: c.$dark-secundary;
+    border: 1px solid c.$border;
+    color: white;
+    width: 17%;
+    margin: 0;
+    &:focus{
+        border: 1px solid c.$primary;
+    }
+}
+
+.mode__input{
+    @include m.input;
+    margin: 0 3px;
+    background-color: c.$dark-secundary;
+}
+
+.mode__input2{
+    @include m.input;
+    margin: 0 3px 0 10px;
+    background-color: c.$dark-secundary;
+}
+
+.mode__inputRes{
+    @include m.center(column);
+}
+
+.mode__checkbox{
+    height: 15px;
+    margin: 3px 0 0 0;
+    color: red;
+}
+
+.mode__total{
+    @include m.input;
+    background-color: c.$dark-secundary;
+    color: white;
+    margin-left: 10px;
+    font-size: 13px;
+    width: 35px;
+}
+
+.mode__res{
+    @include m.center(row)
+}
+
+.mode__resultado{
+    @include m.center(row);
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    p{
+        margin: 0 0 5px 0;
+    }
+    div {
+        @include m.center(column); 
+    }
+}
+
+.mode__resultado-subtitle{
+    margin: 0;
+    color: c.$primary;
+    font-weight: 600;
+    letter-spacing: .45px;
+}
