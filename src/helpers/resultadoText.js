@@ -1,4 +1,5 @@
 export const resultadoText = (total1, total2, competidor1, competidor2) => {
+    
     const resto1 = total1 - total2
     const resto2 = total2 - total1
         
