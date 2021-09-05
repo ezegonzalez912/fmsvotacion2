@@ -19,7 +19,7 @@ export const ModalFormato = ({isChangeModal, isSubmitModal}) => {
     const formatoCorrecto = (text) => {
         if(text === "Formato 2018/2019"){return "2018"}
         if(text === "Formato 2020/2021"){return "2020"}
-        if(text === "Formato FMS Internacional (Beta)"){return "2021"}
+        if(text === "Formato Internacional 2021"){return "2021"}
     }
 
     const [values, handleInputChange] = useForm({fms: formatoCorrectoInv()});
