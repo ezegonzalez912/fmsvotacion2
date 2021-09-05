@@ -6,6 +6,7 @@ import { TotalProvider } from './Contexts/TotalContext'
 import { MenuVotacion } from './Votacion/menuVotacion/MenuVotacion'
 
 export const VotacionApp = ({ventana, setGreenScreen}) => {
+  
   return (
     <DataProvider>
       <FormatoProvider>

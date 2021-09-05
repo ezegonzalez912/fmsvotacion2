@@ -14,7 +14,9 @@ export const AppRouter = () => {
             <StartProvider>
                 <Router>
                     <Switch>
+
                         <Route exact path="/vote-window" component={VoteVentana} />
+                        
                         <>
                             <NavBar />
                             <Switch>

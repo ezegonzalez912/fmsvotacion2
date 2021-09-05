@@ -66,7 +66,7 @@ export const MenuVotacion = ({ventana, setGreenScreen}) => {
                                 <p>
                                     •Puntos medios con <span className="color-primary f-w800">.</span> (Punto).<br />
                                     •Marcar respuesta con <span className="color-primary f-w800">+</span> (Más).<br />
-                                    •Avanzar entre inputs con <span className="color-primary f-w800">TAB</span>.
+                                    •Avanzar entre patrones con <span className="color-primary f-w800">TAB</span>.
                                 </p>
                             </div>
                         </div>
