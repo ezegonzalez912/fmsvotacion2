@@ -90,7 +90,7 @@
         p{
             color: white;
             font-weight: 300;
-            font-size: 14px;
+            font-size: 13px;
         }
     }
 }
@@ -112,7 +112,7 @@
     .resultadosRead__content{
         div{
             p{
-                font-size: 13px;
+                font-size: 12px;
             }
         }
     }
@@ -137,11 +137,18 @@
             font-size: 13px;
         }
     }
+    .voted-saved__card{
+        padding: 3px;
+        overflow: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
     .resultadosRead__content{
         gap: 5px;
         div{
             p{
-                font-size: 13px;
+                font-size: 12px;
             }
         }
     }

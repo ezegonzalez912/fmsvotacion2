@@ -1,12 +1,10 @@
 import React from 'react'
 
-export const IncrementalMode = ({data, inputChange, competidor, total, handleInputChange, compName}) => {
+export const IncrementalMode = ({data, inputChange, total, competidor}) => {
 
     return (
         <div className="mode__main">
-            {
-                competidor ? <input tabIndex="-100" maxLength="10" className="mode__name" type="text" name={competidor} value={compName} onChange={handleInputChange}/> : <p>{compName}</p>
-            }
+            <p>{competidor}</p>
             <div>
                 <input name="input1" value={data.input1} onChange={inputChange} autoComplete="off" className="mode__input" inputMode="tel"/>
                 <input name="input2" value={data.input2} onChange={inputChange} autoComplete="off" className="mode__input" inputMode="tel"/>

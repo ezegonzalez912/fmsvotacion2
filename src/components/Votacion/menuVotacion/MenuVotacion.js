@@ -71,7 +71,7 @@ export const MenuVotacion = ({ventana, setGreenScreen}) => {
                             </div>
                         </div>
                     </div>
-                    <ModeVotacion showTotal={showTotal} invertir={invertir} mode={mode}/>
+                    <ModeVotacion showTotal={showTotal} invertir={invertir} mode={mode} setMode={setMode} formato={formato}/>
                     <div className="menu__show" onClick={() => setButtons(!buttons)}>
                         <FontAwesomeIcon icon={buttons ? faChevronDown : faChevronUp} />
                     </div>

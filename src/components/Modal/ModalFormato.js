@@ -36,7 +36,7 @@ export const ModalFormato = ({isChangeModal, isSubmitModal}) => {
             <select autoFocus name="fms" value={values.fms} className="modal__input cursor-p" onChange={handleInputChange}>
                 <option>Formato 2018/2019</option>
                 <option>Formato 2020/2021</option>
-                <option>Formato FMS Internacional (Beta)</option>
+                <option>Formato Internacional 2021</option>
             </select>
             <div>
                 <button className="modal__button" onClick={isChangeModal}>Cancelar</button>

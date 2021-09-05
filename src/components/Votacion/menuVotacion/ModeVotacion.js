@@ -1,4 +1,5 @@
 import React from 'react'
+import { ReplicaMenu } from './ReplicaMenu';
 import { ReplicaMode } from './ReplicaMode';
 import { EasyModeMenu } from './EasyModeMenu';
 import { HardModeMenu } from './HardModeMenu';
@@ -13,7 +14,8 @@ import { Resultados } from './Resultados';
 import { IncrementalMenu } from './IncrementalMenu';
 import { Clasico8x8Menu } from './Clasico8x8Menu';
 
-export const ModeVotacion = ({showTotal, invertir, mode}) => {
+export const ModeVotacion = ({showTotal, invertir, mode, setMode, formato}) => {
+
     return (
         <>
             {
@@ -28,8 +30,10 @@ export const ModeVotacion = ({showTotal, invertir, mode}) => {
                 : mode === "PRIMER MINUTO SANGRE" ? <FirstSangreMenu showTotal={showTotal}/>
                 : mode === "SEGUNDO MINUTO SANGRE" ? <SecondSangreMenu showTotal={showTotal}/>
                 : mode === "RONDA DELUXE" ? <DeluxeModeMenu showTotal={showTotal}/>
-                : mode === "REPLICA" ? <ReplicaMode invertir={invertir} showTotal={showTotal}/>
-                : <Resultados />
+                : mode === "REPLICA" ? formato === "2021" 
+                ? <ReplicaMenu invertir={invertir} showTotal={showTotal}/>
+                : <ReplicaMode invertir={invertir} showTotal={showTotal}/>
+                : <Resultados setMode={setMode}/>
             }
         </>
     )

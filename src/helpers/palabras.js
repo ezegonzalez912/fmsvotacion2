@@ -21,12 +21,13 @@ export const palabras = [
         'Carro', 'Clima', 'Guantes', 'Conservador', 'Cocodrilo', 'Rociar', 'Responder', 'Estufa', 'Construir', 'Curar', 'Jefe', 'Defecto', 'Enemigo', 'Antorcha', 'Tremendo',
         'Carbón', 'Llave', 'Mujeres', 'Justicia', 'Mapa', 'Obligación', 'Montaña', 'Buzón', 'Colmena', 'Dardo', 'Eficaz', 'Castillo', 'Cantidad', "Problema", "Quebrar", "Pistola", 
         'Levantarse', 'Abandonado', 'Mago', 'ley', "Bandera", "Pais", "Honesto", "Cumpleaños", "Burbuja", "Planeta", "Galaxia", "Iphone", "Nacer", "Botella", "Steve Jobs", "Elon Musk", "Facebook",
-        'Escandaloso', 'Presión', 'Mezcla', 'Mano', 'Tarta', 'Híbrido', 'Lista', 'Lujoso', 'Atacar', 'Ahogado', 'Medianoche', 'Vacuna', "Navegar", "Medalla", "Mercenario", "Tiempo", "Guardaespaldas"]
+        'Escandaloso', 'Presión', 'Mezcla', 'Mano', 'Tarta', 'Híbrido', 'Lista', 'Lujoso', 'Atacar', 'Ahogado', 'Medianoche', 'Vacuna', "Navegar", "Medalla", "Mercenario", "Tiempo", "Guardaespaldas",
+        "conquista", "Colon", "hambre", "Africa", "Arbitrario", "Eficiente","Monótono","Alzheimer", "Táctica", "Basura", "Potencial","Promesa","Llamas", "Trébol", "Nudillos", "Desarmado","Masticar","Señalar",]
     },
     {
-        tematicas: ['Fanatismo', 'Obligaciones', 'Bizarrap', 'Politicos', 'Poder', 'Estudios', 'Profesiones', 'Literatura', 'Cine', 'Futbol', 'Terror', 'Series', 'Pelicuas', 'Historia', 'Paises',
-        'Contaminacion', 'Tecnologia', 'Deportes', 'Basquet', 'NBA', 'Streamers', 'Campeones', 'Climas', 'Gueras', 'Niños', 'Doses', 'Pandemia', 'Actualidad', 'Amigos', 'Viajes', "Injusticias",
-        'Famosos', 'Epocas', 'Traperos', 'Regalos', 'Familia', 'Conspiraciones', 'Energia', 'Poder', 'Dieta', 'Libertad', 'Desastres', 'Influencers', 'Marcas', 'Drogas','Television','Juegos',
+        tematicas: ['Fanatismo', 'Obligaciones', 'Bizarrap', 'Politicos', 'Poder', 'Estudios', 'Profesiones', 'Literatura', 'Cine', 'Futbol', 'Terror', 'Series', 'Pelicuas', 'Historia', 'Paises', "Alzheimer",
+        'Contaminacion', 'Tecnologia', 'Deportes', 'Basquet', 'NBA', 'Streamers', 'Campeones', 'Climas', 'Gueras', 'Niños', 'Doses', 'Pandemia', 'Actualidad', 'Amigos', 'Viajes', "Injusticias", "Africa", "Promesa",
+        'Famosos', 'Epocas', 'Traperos', 'Regalos', 'Familia', 'Conspiraciones', 'Energia', 'Poder', 'Dieta', 'Libertad', 'Desastres', 'Influencers', 'Marcas', 'Drogas','Television','Juegos', "conquistar",
         'Crimenes', 'Infancia', 'Felicidad','Religion','Trabajos', 'Hackers', 'Leyendas', 'Ingresos', 'Magia', 'Polemicas', 'Dinero', 'Abanderado', 'Colegio', 'Consejos', 'Galaxia', 'Leyes', 'Eventos', 'Musica',
         'Bad bunny', 'Daddy Yankee', 'Estaciones', 'Matematicas','Censura', 'Messi', 'CR7', 'Neymar', 'Mbappe', 'Lebron', 'Veganismo', 'E-Sports', 'Marvel', 'Comic', 'Fobias', "Twitch", "Youtubers", "Videoclips",
         "Popularidad", "Honestidad", "Cumpleaños", "Vialactea", "Redes sociales", "Olimpiadas", "Inteligencia Artificial", "Guerras", "Reciclar", "Matrimonio", "Contratos", "Anime", "Drogras", "Noticias", "Actualidad"]

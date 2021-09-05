@@ -12,8 +12,6 @@ export const RandomMode = ({data, inputChange, competidor, total}) => {
                 <input name="input4" value={data.input4} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="2" inputMode="tel"/>
                 <input name="input5" value={data.input5} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="3" inputMode="tel"/>
                 <input name="input6" value={data.input6} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="3" inputMode="tel"/>
-                <input name="input7" value={data.input7} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="4" inputMode="tel"/>
-                <input name="input8" value={data.input8} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="4" inputMode="tel"/>
                 <input name="input12" value={data.input12} onChange={inputChange} autoComplete="off"  className="mode__input2" tabIndex="5" inputMode="tel"/>
                 <input name="input13" value={data.input13} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="5" inputMode="tel"/>
                 <input name="input14" value={data.input14} onChange={inputChange} autoComplete="off"  className="mode__input" tabIndex="5" inputMode="tel"/>

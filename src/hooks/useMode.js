@@ -8,84 +8,66 @@ export const useMode = () => {
     const {formato} = useContext(FormatoContext)
 
     useEffect(() => {
-        if(formato === "2021"){
-            setMode("INCREMENTAL")
-        }else{
-            setMode("EASY MODE")
-        }
+        setMode("EASY MODE")
     }, [formato])
 
     const prevMode = () => {
-        if(formato === "2021"){
-            switch (mode){
-                case "RESULTADOS":
-                    return setMode("CLASICO 8X8")
-                case "CLASICO 8X8":
-                    return setMode("INCREMENTAL")
-                default:
-                    return setMode("INCREMENTAL");
-            }   
-        }else{
-            switch (mode){
-                case "REPLICA":
-                    return setMode("RESULTADOS");
-                case "RESULTADOS":
-                    return setMode("RONDA DELUXE");
-                case "RONDA DELUXE":
-                    return setMode("SEGUNDO MINUTO SANGRE");
-                case "SEGUNDO MINUTO SANGRE":
-                    return setMode("PRIMER MINUTO SANGRE");
-                case "PRIMER MINUTO SANGRE":
-                    return formato === "2018" ? setMode("PERSONAJES CONTRAPUESTOS") : setMode("RANDOM MODE");
-                case "RANDOM MODE":
-                    return setMode("SEGUNDA TEMATICA");
-                case "PERSONAJES CONTRAPUESTOS":
-                    return setMode("SEGUNDA TEMATICA");
-                case "SEGUNDA TEMATICA":
-                    return setMode("PRIMER TEMATICA");
-                case "PRIMER TEMATICA":
-                    return setMode("HARD MODE");
-                case "HARD MODE":
-                    return setMode("EASY MODE")
-                default:
-                    return setMode("EASY MODE");
-            }
+        switch (mode){
+            case "REPLICA":
+                return setMode("RESULTADOS");
+            case "RESULTADOS":
+                return setMode("RONDA DELUXE");
+            case "RONDA DELUXE":
+                return formato === "2021" ? setMode("CLASICO 8X8") : setMode("SEGUNDO MINUTO SANGRE");
+            case "CLASICO 8X8":
+                return setMode("SEGUNDO MINUTO SANGRE")
+            case "SEGUNDO MINUTO SANGRE":
+                return setMode("PRIMER MINUTO SANGRE");
+            case "PRIMER MINUTO SANGRE":
+                return formato === "2018" ? setMode("PERSONAJES CONTRAPUESTOS") : setMode("RANDOM MODE");
+            case "RANDOM MODE":
+                return setMode("SEGUNDA TEMATICA");
+            case "PERSONAJES CONTRAPUESTOS":
+                return setMode("SEGUNDA TEMATICA");
+            case "SEGUNDA TEMATICA":
+                return setMode("PRIMER TEMATICA");
+            case "PRIMER TEMATICA":
+                return formato === "2021" ? setMode("INCREMENTAL") : setMode("HARD MODE");
+            case "INCREMENTAL":
+                return setMode("HARD MODE")
+            case "HARD MODE":
+                return setMode("EASY MODE")
+            default:
+                return setMode("EASY MODE");
         }
     }
 
     const nextMode = () => {
-        if(formato === "2021"){
-            switch (mode){
-                case "INCREMENTAL":
-                    return setMode("CLASICO 8X8")
-                case "CLASICO 8X8":
-                    return setMode("RESULTADOS")
-                default:
-                    return setMode("RESULTADOS");
-            }   
-        }else{
-            switch (mode){
-                case "EASY MODE":
-                    return setMode("HARD MODE");
-                case "HARD MODE":
-                    return setMode("PRIMER TEMATICA");
-                case "PRIMER TEMATICA":
-                    return setMode("SEGUNDA TEMATICA");
-                case "SEGUNDA TEMATICA":
-                    return formato === "2018" ? setMode("PERSONAJES CONTRAPUESTOS") : setMode("RANDOM MODE");
-                case "PERSONAJES CONTRAPUESTOS":
-                    return setMode("PRIMER MINUTO SANGRE");
-                case "RANDOM MODE":
-                    return setMode("PRIMER MINUTO SANGRE");
-                case "PRIMER MINUTO SANGRE":
-                    return setMode("SEGUNDO MINUTO SANGRE");
-                case "SEGUNDO MINUTO SANGRE":
-                    return setMode("RONDA DELUXE");
-                case "RONDA DELUXE":
-                    return setMode("RESULTADOS");
-                default:
-                    return setMode("RESULTADOS");
-            }
+        switch (mode){
+            case "EASY MODE":
+                return setMode("HARD MODE");
+            case "HARD MODE":
+                return formato === "2021" ? setMode("INCREMENTAL") : setMode("PRIMER TEMATICA");
+            case "INCREMENTAL":
+                return setMode("PRIMER TEMATICA");
+            case "PRIMER TEMATICA":
+                return setMode("SEGUNDA TEMATICA");
+            case "SEGUNDA TEMATICA":
+                return formato === "2018" ? setMode("PERSONAJES CONTRAPUESTOS") : setMode("RANDOM MODE");
+            case "PERSONAJES CONTRAPUESTOS":
+                return setMode("PRIMER MINUTO SANGRE");
+            case "RANDOM MODE":
+                return setMode("PRIMER MINUTO SANGRE");
+            case "PRIMER MINUTO SANGRE":
+                return setMode("SEGUNDO MINUTO SANGRE");
+            case "SEGUNDO MINUTO SANGRE":
+                return formato === "2021" ? setMode("CLASICO 8X8") : setMode("RONDA DELUXE");
+            case "CLASICO 8X8":
+                return setMode("RONDA DELUXE")
+            case "RONDA DELUXE":
+                return setMode("RESULTADOS");
+            default:
+                return setMode("RESULTADOS");
         }
     }
 
